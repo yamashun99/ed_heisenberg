@@ -10,8 +10,9 @@ def make_Gkomega(Gijs, ks):
         for k in ks:
             Gk = 0+0j
             for ix in range(L):
-                Gk += np.exp(1.0j*k*ix)*Gijs[iomega][ix]
+                Gk += np.exp(-1.0j*k*ix)*Gijs[iomega][ix]
             Gks.append(Gk)
         Gkomegas.append(Gks)
     Gkomegas = np.array(Gkomegas)
+    Gkomegas = Gkomegas/np.sqrt(L)
     return Gkomegas
