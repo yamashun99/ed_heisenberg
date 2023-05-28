@@ -15,6 +15,7 @@ plt.rcParams.update({
     #'figure.subplot.right': 1.0,
 })
 np.set_printoptions(precision=3)
+aaa
 
 
 def make_matrix(ss):
