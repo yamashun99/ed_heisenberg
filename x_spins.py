@@ -27,7 +27,7 @@ def make_dynamical_structure_factor(eigval, eigvec, S0, S1, omega):
     E0 = eigval[0]
     for j, Ej in enumerate(eigval):
         G += (eigvec[:, 0].conj() @ S0 @ eigvec[:, j]) * (eigvec[:,
-                                                                 j].conj() @ S1 @ eigvec[:, 0]) / (E0 - Ej + omega + 0.1 + 0.1j)
+                                                                 j].conj() @ S1 @ eigvec[:, 0]) / (E0 - Ej + omega + 0.1j)
     return G
 
 
