@@ -19,7 +19,7 @@ def make_matrix(s1, s2):
     return np.kron(s1, s2)
 
 
-def main():
+if __name__ == '__main__':
     sp_ops = make_spin_ops()
     sz = sp_ops['Sz']
     sp = sp_ops['S+']
@@ -33,7 +33,3 @@ def main():
     print("Eigenvectors=", eigvec)
     print(eigvec[:, 0])
     print(hamil @ eigvec)
-
-
-if __name__ == '__main__':
-    main()
