@@ -1,0 +1,5 @@
+initial sz : Sat May 27 15:09:42 2023
+num_threads==1
+omp parallel sz starts: Sat May 27 15:09:42 2023
+mid omp parallel sz : Sat May 27 15:09:42 2023
+omp parallel sz finishes: Sat May 27 15:09:42 2023

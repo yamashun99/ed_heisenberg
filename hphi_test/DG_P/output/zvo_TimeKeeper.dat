@@ -1,0 +1,16 @@
+Read File starts:   Sat May 27 15:09:42 2023
+Read File finishes: Sat May 27 15:09:42 2023
+initial sz : Sat May 27 15:09:42 2023
+omp parallel sz starts: Sat May 27 15:09:42 2023
+mid omp parallel sz : Sat May 27 15:09:42 2023
+omp parallel sz finishes: Sat May 27 15:09:42 2023
+Reading an input Eigenvector starts: Sat May 27 15:09:42 2023
+Reading an input Eigenvector finishes: Sat May 27 15:09:42 2023
+Calculating an excited Eigenvector starts: Sat May 27 15:09:42 2023
+Calculating an excited Eigenvector finishes: Sat May 27 15:09:42 2023
+diagonal calculation starts:   Sat May 27 15:09:42 2023
+diagonal calculation finishes: Sat May 27 15:09:42 2023
+Calculating a spectrum starts: Sat May 27 15:09:42 2023
+Calculating tridiagonal matrix components starts: Sat May 27 15:09:42 2023
+Calculating tridiagonal matrix components finishes: Sat May 27 15:09:43 2023
+Calculating a spectrum finishes: Sat May 27 15:09:43 2023
