@@ -44,32 +44,3 @@ def make_Gij(hamil, L, i, j, omega):
     Sj = make_matrix(szj)
     G = make_dynamical_structure_factor(eigval, eigvec, Sj, Si, omega)
     return G
-
-
-if __name__ == '__main__':
-    sp_ops = make_spin_ops()
-    sz = sp_ops['Sz']
-    sp = sp_ops['S+']
-    sm = sp_ops['S-']
-    s0 = sp_ops['I']
-    L = 8
-    hamil = np.zeros((2**L, 2**L))
-    for i in range(L):
-        szsz = [sz, sz] + [s0] * (L - 2)
-        spsm = [sp, sm] + [s0] * (L - 2)
-        smsp = [sm, sp] + [s0] * (L - 2)
-        hamil += make_matrix(szsz[i:] + szsz[:i]) + (make_matrix(
-            spsm[i:] + spsm[:i]) + make_matrix(smsp[i:] + smsp[:i])) / 2.0
-    Gijs = []
-    omegamax = 5
-    omegamesh = 40
-    for iomega in range(omegamesh):
-        print(iomega)
-        Gijs_axis0 = []
-        for j in range(L):
-            omega = iomega / omegamesh * omegamax
-            Gij = make_Gij(hamil, L, 0, j, omega)
-            Gijs_axis0.append(Gij)
-        Gijs.append(Gijs_axis0)
-    Gijs = np.array(Gijs)
-    np.save('Gijs.npy', Gijs)
