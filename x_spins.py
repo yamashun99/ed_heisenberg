@@ -1,6 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 
 def make_spin_ops():
@@ -24,7 +22,7 @@ def make_matrix(ss):
     return res
 
 
-def make_dynamical_structure_factor(hamil, eigval, eigvec, S0, S1, omega):
+def make_dynamical_structure_factor(eigval, eigvec, S0, S1, omega):
     G = 0 + 0j
     E0 = eigval[0]
     for j, Ej in enumerate(eigval):
@@ -44,7 +42,7 @@ def make_Gij(hamil, L, i, j, omega):
     szj = [s0] * j + [sz] + [s0] * (L - j - 1)
     Si = make_matrix(szi)
     Sj = make_matrix(szj)
-    G = make_dynamical_structure_factor(hamil, eigval, eigvec, Sj, Si, omega)
+    G = make_dynamical_structure_factor(eigval, eigvec, Sj, Si, omega)
     return G
 
 
