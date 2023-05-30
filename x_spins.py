@@ -31,13 +31,12 @@ def make_dynamical_structure_factor(eigval, eigvec, S0, S1, omega):
     return G
 
 
-def make_Gij(hamil, L, i, j, omega):
+def make_Gij(eigval, eigvec, L, i, j, omega):
     sp_ops = make_spin_ops()
     sz = sp_ops['Sz']
     sp = sp_ops['S+']
     sm = sp_ops['S-']
     s0 = sp_ops['I']
-    eigval, eigvec = np.linalg.eigh(hamil)
     szi = [s0] * i + [sz] + [s0] * (L - i - 1)
     szj = [s0] * j + [sz] + [s0] * (L - j - 1)
     Si = make_matrix(szi)
