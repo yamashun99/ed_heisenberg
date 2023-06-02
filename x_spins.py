@@ -43,5 +43,3 @@ def make_Gij(eigval, eigvec, L, i, j, omega):
     Sj = make_matrix(szj)
     G = make_dynamical_structure_factor(eigval, eigvec, Sj, Si, omega)
     return G
-
-# aaa
